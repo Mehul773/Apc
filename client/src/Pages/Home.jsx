@@ -124,7 +124,7 @@ function Home() {
               })
             );
 
-            toast.success("Counts increased successfully");
+            toast.success("Counts decreased successfully");
           }
         });
     } catch (error) {

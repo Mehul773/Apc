@@ -81,8 +81,11 @@ const decreaseCount = async (req, res) => {
     }
 
     for (const student of students) {
-      student.count -= 1;
-      await student.save();
+      if(student.count != 0)
+      {
+        student.count -= 1;
+        await student.save();
+      }
     }
 
     res.status(200).json({ message: 'Counts decreased successfully', students });
